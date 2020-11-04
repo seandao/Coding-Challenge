@@ -4,7 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.math.BigDecimal;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -16,9 +18,12 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
+    @Min(1950)
+    @Max(2050)
     private int year;
+    @NotNull
     private String make;
+    @NotNull
     private String model;
 
     public Vehicle() {}
