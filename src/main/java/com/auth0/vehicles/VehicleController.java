@@ -1,10 +1,6 @@
 package com.auth0.vehicles;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.nio.file.Path;
-import java.util.List;
 
 @RestController
 public class VehicleController {
@@ -20,7 +16,7 @@ public class VehicleController {
         return repository.findAll();
     }
 
-    // Get a single vehicle
+    // Get a specific vehicle
     @GetMapping("/vehicles/{id}")
     Vehicle getOne(@PathVariable int id) {
         return repository.findById(id)
@@ -33,7 +29,7 @@ public class VehicleController {
         return repository.save(newVehicle);
     }
 
-    // Update a single vehicle
+    // Update a specific vehicle
     @PutMapping("/vehicles/{id}")
     Vehicle updateVehicle(@RequestBody Vehicle newVehicle, @PathVariable int id) {
         return repository.findById(id)
@@ -49,7 +45,7 @@ public class VehicleController {
                 });
     }
 
-    // Delete a single vehicle
+    // Delete a specific vehicle
     @DeleteMapping("/vehicles/{id}")
     void deleteVehicle(@PathVariable int id) {
         repository.deleteById(id);
