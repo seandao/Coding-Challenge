@@ -18,11 +18,14 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     @Min(1950)
     @Max(2050)
     private int year;
+
     @NotNull
     private String make;
+
     @NotNull
     private String model;
 
@@ -34,7 +37,6 @@ public class Vehicle {
         this.model = model;
     }
 
-    // getters and setters
     public int getId() {
         return id;
     }
