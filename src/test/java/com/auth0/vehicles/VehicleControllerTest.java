@@ -90,7 +90,7 @@ class VehicleControllerTest {
 
     @Test
     @DisplayName("PUT /vehicles/1")
-    void testUpdateWidgetById() throws Exception {
+    void testUpdateVehicleById() throws Exception {
         Vehicle putVehicle = new Vehicle(1972, "Honda", "Civic");
         Vehicle returnFindByVehicle = new Vehicle(2012, "Toyota", "Camry");
         Vehicle saveVehicle = new Vehicle(2019, "Tesla", "M3");
