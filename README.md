@@ -1,4 +1,4 @@
-# Mitchell-Coding-Challenge
+# Coding-Challenge
 Spring Boot API for vehicle entity
 
 Performs CRUD on a vehicle object. Follow steps to use
